@@ -1,0 +1,118 @@
+/* Hamburger menu */
+
+.menu-toggle{
+    display: none;
+    flex-direction: column-reverse;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -5;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--text-color);
+    border: 3px;
+    transition:  1s;
+}
+
+/* hambuerger menu animation */
+
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, 0)
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0)
+}
+
+/* Responsive Brekpoint */
+
+@media (max-width: 768px) {
+    .menu-toggle{
+        display: flex;
+    }
+    label.logo{
+        font-size: 32px;
+        padding-left: 60px;
+    }
+    .header{
+        margin-right: 20px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 807px) {
+
+    .navbar{
+        position: absolute;
+        right: 0;
+        width: 70%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: -1;
+        background: #1e1f20;
+        top: 58px;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+/* 
+    .home-img {
+        width: 33vw;
+        border: 2px solid var(--main-color);
+        border-radius: 60%;
+        height: 33vw;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        gap: 50px;
+    } */
+
+    .about-img {
+        margin-bottom: 50%;
+    }
+
+    nav.slide {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    nav a{
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+    nav.show{
+        left: 0;
+    }
+}

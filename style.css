@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color:#000000;
+    --second-bg-color:#323946;
+    --text-color:#ffff;
+    --main-color:#0ef;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;   
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 10%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.logo:hover{
+    color: var(--main-color);
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: 3.s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img img{
+    width: 33vw;
+    /* border: 2px solid var(--main-color);
+    border-radius: 60%;
+    height: 33vw; */
+    
+}
+
+.home-content h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0; 
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 3rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: 0rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.about-img img{
+    width: 20vw;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--bg-color);
+}
+
+/* education */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+/* ukuran font */
+.pre-tittle{
+    font-size: 15px;
+}
+.section-tittle{
+    font-size: 25px;
+}
+.education-tittle{
+    font-size: 20px;
+}
+.education-info p {
+    font-size: 15px;
+}
+.education-yers{
+    font-size: 15px;
+}
+/*  */
+
+.education{
+    margin: 10px;
+    display: flex;
+    gap: 2rem;
+}
+
+.education .line{
+    padding: 0 .7rem;
+}
+
+.education .line div {
+    width: 2px;
+    height: 100%;
+    background: aqua;
+    position: relative;
+}
+
+.education-info p {
+    margin: .6rem 0 1.4rem;
+}
+
+.education-yers {
+    margin-bottom: 3rem;
+}
+
+/* the dot on the line */
+.education .line div:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: aqua;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+
+.heading1{
+    text-align: center;
+    font-size: 4.5rem;
+    padding: 20px;
+}
+
+.about-content h2 {
+    text-align: left;
+    font-size: 1.2;
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+.lapisan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+}
+.card {
+    width: 300px;
+    height: 490px;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 8px solid #fff;
+    position: relative;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 2s;
+}
+
+.card:hover .card-body {
+    right: -100%;
+}
+
+.card-tittle {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.card-info {
+    font-size: 16px;
+    line-height: 25px;
+    margin: 40px 0;
+    font-weight: 400;
+}
+
+.Ambition h2 {
+    margin-bottom: 5rem;
+}
+
+.ambition-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.ambition-container .ambition-box {
+    flex: 1 1 30rem;
+    background: #151414;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 0.50rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.ambition-container .ambition-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.ambition-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.ambition-box h3 {
+    font-size: 2.6rem;
+}
+
+.ambition-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 130px;
+    flex-wrap: wrap;
+}
+
+.heading2{
+    text-align: center;
+    font-size: 4.5rem;
+    padding: 27px;
+}
+
+.container .box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 239px;
+    height: 320px;
+    background: var(--clr-color);
+    box-shadow: 0 0 0 15px #0e1012,
+    0 25px 55px var(--clr-color)
+}
+
+.container .box h2 {
+    position: relative;
+    color: #171a1f;
+    font-size: 5em;
+    text-align: center;
+    line-height: 2.5em;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-delay: 0;
+    filter: blur(10px);
+}
+
+.container .box h2 small {
+    font-size: 0.50em;
+    text-transform: uppercase;
+}
+
+.container .box:hover h2 {
+    transform: scale(1);
+    transition-delay: 0.5ss;
+    filter: blur(0px);
+}
+
+.container .box ion-icon {
+    position: absolute;
+    font-size: 6em;
+    transition: 0.5s;
+    transition-delay: 0s;
+    opacity: 0;
+    transform: translatey(100px);
+    color: #000000;
+}
+
+.container .box:hover ion-icon {
+    transform: translatey(0px);
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.container .box .clip {
+    position: absolute;
+    inset: 20px;
+    box-shadow: 0 0 0 18px #0e1012;
+}
+
+.container .box .clip span {
+    position: absolute;
+    inset: 0;
+    background: #0e1012;
+    transition: 0.25s;
+}
+
+.container .box .clip span:nth-child(1) {
+    clip-path: polygon(0 0, 50% 40%, 100% 0);
+    transition-delay: 0s;
+}
+
+.container .box:hover .clip span:nth-child(1) {
+    clip-path: polygon(0 0, 50% 0 , 100% 0);
+}
+
+.container .box .clip span:nth-child(2) {
+    clip-path: polygon(0 0, 40% 50%, 50% 100%, 0% 100%);
+    transition-delay: 0.25s;
+}
+
+.container .box:hover .clip span:nth-child(2) {
+    clip-path: polygon(0 0, 0 100%, 50% 100%, 0% 100%);
+
+}
+
+.container .box .clip span:nth-child(3) {
+    clip-path: polygon(60% 50%, 100% 0, 100% 100%, 50% 100%);
+    transition-delay: 0.5s;
+}    
+
+.container .box:hover .clip span:nth-child(3) {
+    clip-path: polygon(100% 100%, 100% 0, 100% 100%, 50% 100%);
+}
+
+/* contact section */
+.contact1 {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.contact{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.contact-form div {
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    font-size: 15px;
+    padding: 0.75rem 1.3rem;
+    font-family: "poppines", sans-serif;
+    background: var(--second-bg-color);
+    color: var(--text-color);
+    border: 1px solid rgb(110, 110, 110);
+    border-radius: 5px;
+    resize: none;
+}
+
+.contact-form input {
+    height: 50px;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: whitesmoke;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+ outline: none;   
+ border: 2.5px solid var(--main-color);
+}
+
+.submit {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.submit:hover {
+    background: rgb(0, 201, 201);
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.contact-items-icon {
+    background: rgb(68, 255, 255);
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-item-detail h4 {
+    margin-bottom: 0.6rem;
+    align-items: start;
+}
+
+.contact-items-icon i {
+    fill: var(--text-color);
+    font-size: 25px;
+}
+.contact-left {
+    width: 80%;
+}
+.contact-right {
+    width: -20%;
+}
+
+/* and contact section */
+
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+
+
+
